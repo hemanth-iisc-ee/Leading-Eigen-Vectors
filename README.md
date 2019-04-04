@@ -2,7 +2,7 @@
 Simple code to compute the two leading eigen vectors and eigen values of a real symetric matric.
 The code uses the Symbolic Math (sympy) library.
 
-# First Eigen Vector
+# First Eigen Vector/Value
 
 ![CodeCogsEqn](https://user-images.githubusercontent.com/3444740/55593729-9af60b80-575a-11e9-97b8-12f7ff359a8f.gif)
 
@@ -10,7 +10,7 @@ The code uses the Symbolic Math (sympy) library.
 
 ![CodeCogsEqn (2)](https://user-images.githubusercontent.com/3444740/55594093-f5439c00-575b-11e9-8484-e5b338563c05.gif)
 
-# Second Eigen Vector
+# Second Eigen Vector/Value
 
 ![CodeCogsEqn (3)](https://user-images.githubusercontent.com/3444740/55594102-fbd21380-575b-11e9-95ce-1c234ba6a1b1.gif)
 
