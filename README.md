@@ -17,4 +17,4 @@ The code uses the Symbolic Math (sympy) library.
 ![CodeCogsEqn (4)](https://user-images.githubusercontent.com/3444740/55594107-ff659a80-575b-11e9-8437-cb4293a24abe.gif)
 
 # Note
-The code is not an efficient soultion to Eigen Decomposition problem, it is just a demonstartion of application of numerical optimization techniques for finding the leading eigen vectors.  
+The code is not an efficient soultion to Eigen Decomposition problem, it is just a demonstartion of application of numerical optimization techniques.  
