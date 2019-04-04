@@ -13,6 +13,7 @@ The code uses the Symbolic Math (sympy) library.
 # Second Eigen Vector
 
 ![CodeCogsEqn (3)](https://user-images.githubusercontent.com/3444740/55594102-fbd21380-575b-11e9-95ce-1c234ba6a1b1.gif)
+
 ![CodeCogsEqn (4)](https://user-images.githubusercontent.com/3444740/55594107-ff659a80-575b-11e9-8437-cb4293a24abe.gif)
 
 # Note
