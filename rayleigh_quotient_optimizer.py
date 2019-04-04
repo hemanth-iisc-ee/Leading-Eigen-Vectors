@@ -19,6 +19,11 @@ def create_X(dim=10):
 # First Eigen Vector
 dim = 3
 A,V,L = cerate_A_sym_mat(dim)
+
+# To handle Rank defeciency
+c = 10
+A = A + c*np.eye(dim)
+
 X = create_X(dim)
 f0 = -1*X.T.dot(A).dot(X)/X.T.dot(X)
 df0 = f0.diff(X)
@@ -84,4 +89,4 @@ V1 = V1 - np.dot(V1,V0)*V0
 V1 = V1/np.linalg.norm(V1)
 l1 = result1.fun
 
-print('lambda_0 = {}, lambda_0 = {}'.format(np.sign(l0)*l0,np.sign(l1)*l1))
+print('lambda_0 = {}, lambda_0 = {}'.format(np.sign(l0)*l0 - c,np.sign(l1)*l1 - c))
