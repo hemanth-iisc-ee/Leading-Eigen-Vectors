@@ -1,5 +1,5 @@
 # Leading-Eigen-Vectors
-Simple code to compute the two leading eigen vectors and eigen values of a real symetric matric.
+Simple code to compute the two leading eigen vectors and eigen values of a real symetric matrix.
 The code uses the Symbolic Math (sympy) library.
 
 # First Eigen Vector/Value
