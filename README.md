@@ -14,6 +14,8 @@ The code uses the Symbolic Math (sympy) library.
 
 ![CodeCogsEqn (3)](https://user-images.githubusercontent.com/3444740/55669428-d98fe100-5894-11e9-8d71-c27441748b05.gif)
 
+# Command
+  python main.py
 
 # Note
 The code is not an efficient soultion to Eigen Decomposition problem, it is just a demonstartion of application of numerical optimization techniques.  
