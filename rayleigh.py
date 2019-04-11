@@ -21,6 +21,7 @@ class RayleighQuotient():
 		self.dim = A.shape[0]
 		self.A = A
 		self.X = self.create_var_X(self.dim)
+		self.rq = self.func()
 		self.f = self.func()
 		self.df = self.f.diff(self.X)
 		self.H = self.df.diff(self.X)
@@ -48,6 +49,12 @@ class RayleighQuotient():
 		self.df = self.f.diff(self.X)
 		self.H = self.df.diff(self.X)
 		return
+
+	def eval_rq(self, x):
+		value = {}
+		for var,val in zip(range(len(x)),x):
+			value['x'+str(var)] = val
+		return self.rq.subs(value)
 
 	def eval(self, x):
 		value = {}
