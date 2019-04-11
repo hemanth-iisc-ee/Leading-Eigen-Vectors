@@ -31,7 +31,7 @@ x0 = np.random.randn(dim)
 x0 = x0/np.linalg.norm(x0)
 result1 = optimize.minimize(rq_obj.eval, x0, method='Newton-CG', jac=rq_obj.grad, hess=rq_obj.hessian, options={'xtol': 1e-3, 'disp': False})  
 V1 = result1.x/np.linalg.norm(result1.x)
-V1 = V1 - np.dot(V1,V0)*V0
+V1 = V1 - np.dot(V1,V0)*V0 # Making sure that V1 is perpendicular to V0
 V1 = V1/np.linalg.norm(V1)
 l1 = result1.fun
 
