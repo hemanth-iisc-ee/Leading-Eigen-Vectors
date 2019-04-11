@@ -1,7 +1,6 @@
 import os
 import sys
 import numpy as np
-from scipy import optimize
 
 from rayleigh import cerate_A_sym_mat
 from rayleigh import RayleighQuotient
@@ -20,17 +19,13 @@ A = A + c*np.eye(dim)
 rq_obj = RayleighQuotient(A)
 
 # First Eigen Vector
-x0 = np.random.randn(dim)
-x0 = x0/np.linalg.norm(x0)
-result = optimize.minimize(rq_obj.eval, x0, method='Newton-CG', jac=rq_obj.grad, hess=rq_obj.hessian, options={'xtol': 1e-3, 'disp': False})  
+result = rq_obj.optimize()
 V0 = result.x/np.linalg.norm(result.x)
 l0 = rq_obj.eval_rq(V0)
 
 # Second Eigen Vector
-rq_obj.update_func(V0.reshape((dim,1)))
-x0 = np.random.randn(dim)
-x0 = x0/np.linalg.norm(x0)
-result = optimize.minimize(rq_obj.eval, x0, method='Newton-CG', jac=rq_obj.grad, hess=rq_obj.hessian, options={'xtol': 1e-3, 'disp': False})  
+rq_obj.update_func(V0.reshape((dim,1))) # modify the objective function
+result = rq_obj.optimize()
 V1 = result.x/np.linalg.norm(result.x)
 V1 = V1 - np.dot(V1,V0)*V0 # Making sure that V1 is perpendicular to V0
 V1 = V1/np.linalg.norm(V1)

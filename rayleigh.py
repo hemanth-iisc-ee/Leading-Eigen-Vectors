@@ -74,3 +74,13 @@ class RayleighQuotient():
 		for var,val in zip(range(len(x)),x):
 			value['x'+str(var)] = val
 		return np.array(self.H.subs(value)).astype('float').reshape(d,d)
+
+	def optimize(self, x0=None):
+		if x0 is None:
+			x0 = np.random.randn(self.dim)
+			x0 = x0/np.linalg.norm(x0)
+		result = optimize.minimize(	self.eval, x0, method='Newton-CG', \
+									jac=self.grad, hess=self.hessian, \
+									options={'xtol': 1e-3, 'disp': False}) 
+		return result 
+
