@@ -6,7 +6,7 @@ import sympy as sp
 from scipy import optimize
 import pdb
 
-def cerate_A_sym_mat(dim=3):
+def create_A_sym_mat(dim=3):
 	Q,_ = np.linalg.qr(np.random.randn(dim,dim) *np.random.randn(dim,dim))
 	s = np.random.choice(dim) + 1
 	S = np.diag(list(reversed(range(s,s+dim))))**2

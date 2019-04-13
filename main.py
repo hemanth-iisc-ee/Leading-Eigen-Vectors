@@ -10,7 +10,7 @@ from rayleigh import RayleighQuotient
 
 
 dim = 4
-A,V,L = cerate_A_sym_mat(dim)
+A,V,L = create_A_sym_mat(dim)
 
 # To handle Rank defeciency
 c = 10
