@@ -2,7 +2,7 @@ import os
 import sys
 import numpy as np
 
-from rayleigh import cerate_A_sym_mat
+from rayleigh import create_A_sym_mat
 from rayleigh import RayleighQuotient
 
 # Set Seed Value
